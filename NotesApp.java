@@ -28,7 +28,7 @@ public class NotesApp {
         }
     }
     public static void clearNotes() {
-        try (FileWriter fw = new FileWriter(FILE_NAME)) { // overwrite mode
+        try (FileWriter fw = new FileWriter(FILE_NAME)) { 
             fw.write("");
             System.out.println("🧹 All notes cleared!");
         } catch (IOException e) {
@@ -46,7 +46,7 @@ public class NotesApp {
             System.out.println("4. Exit");
             System.out.print("Enter your choice: ");
             choice = sc.nextInt();
-            sc.nextLine(); // consume newline
+            sc.nextLine(); 
 
             switch (choice) {
                 case 1:
@@ -71,3 +71,4 @@ public class NotesApp {
         sc.close();
     }
 }
+
